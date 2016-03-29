@@ -15,6 +15,7 @@ Basically what we did was open up filezilla (server is main.g2.bx.psu.edu, user 
 
 General Procudeure of Data Manipulation before analysis (varies sligthly, because this is protocol for RNA-seq):
 http://linus.nci.nih.gov/~brb/GalaxyDoc.pdf
+http://seqanswers.com/forums/showthread.php?t=21331
 
 Before we can join the paired ends we must first use FASTQ_Groomer to to convert the files into the right type (fastqsanger). We choose the datafile we wanted to work with (C1_R1 and C2_R2), and we choose "Sanger & Illumina 1.8+" as the input FASTQ quality score types.
 
