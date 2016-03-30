@@ -5,7 +5,7 @@ Metagenomic Analysis
 
 The following folders contain information related to our metagenomic analysis. GitHub is being used for documentation and version control. 
 
-(enter information about the study here, how samples were taken etc.)
+(enter information about the study here, how samples were taken etc.)    
 Files worked with on 3/29/16 
 /home/voegtlylj/MouseData/HiSeq_150630_2X100/FASTQ/Project_MichaelKiflezghi/Sample_C1
 From here we took R1 (left hand) and R2(right hand) and will run joint fastqc in galaxy
