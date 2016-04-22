@@ -1,7 +1,9 @@
 # RiveraLab
 Metagenomic Analysis   
 
-  Please take the time to read this before beginning-- I cannot stress this enough. If you are not familiar with GitHub, please start here: https://guides.github.com/activities/hello-world/. 
+  Please take the time to read this before beginning-- I cannot stress this enough. If you are not familiar with GitHub, please start here:   
+  https://guides.github.com/activities/hello-world/  
+  http://biorxiv.org/content/early/2016/04/15/048744.full-text.pdf+html   
 
 The following folders contain information related to our metagenomic analysis. GitHub is being used for documentation and version control. 
 
