@@ -1,0 +1,23 @@
+#!/bin/bash
+#This is a Shell script to RUN all the samples. This can be used to run everything in batch.
+echo "Starting to run control samples: C1, C2, C3, C4"
+echo "Running KneadData on Sample_C1: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C1/C1_GTGAAA_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C1/C1_GTGAAA_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/C1
+echo "Running KneadData on Sample_C2: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C2/C2_CTTGTA_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C2/C2_CTTGTA_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/C2
+echo "Running KneadData on Sample_C3: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C3/C3_CAGATC_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C3/C3_CAGATC_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/C3
+echo "Running KneadData on Sample_C4: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C4/C4_AGTCAA_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Control_Data/Sample_C4/C4_AGTCAA_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/C4
+echo "Finished Running Control Samples"
+echo "Starting to run experimental samples: M1, M2, M3, M4"
+echo "Running KneadData on Sample_M1: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M1/M1_ACAGTG_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M1/M1_ACAGTG_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/M1
+echo "Running KneadData on Sample_M2: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M2/M2_GCCAAT_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M2/M2_GCCAAT_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/M2
+echo "Running KneadData on Sample_M3: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M3/M3_CGATGT_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M3/M3_CGATGT_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/M3
+echo "Running KneadData on Sample_M4: R1 and R2"
+kneaddata --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M4/M4_TGACCA_L002_R1_001.fastq --input ~/Rivera_2016/Mouse_Data/Exp_Data/Sample_M4/M4_TGACCA_L002_R2_001.fastq --run-fastqc-start -db ./humanDatabase/Homo_sapiens_Bowtie2_v0.1/ -db ./mouseDatabase/ --run-fastqc-end --output kneaddata_output/M4
+echo "Finished Running Exp. Samples"
+echo "FINISHED! KneadData has run all 8 samples now run everything through Metaphlan2."

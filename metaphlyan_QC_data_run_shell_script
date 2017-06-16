@@ -1,0 +1,50 @@
+#!/bin/bash
+# This is a script to run the QC-ed sequencing files (C1_1, C1_2, C2_1, C2_2, C3_1, C3_2, C4_1, C4_2, M1_1, M1_2, M2_1, M2_2, M3_1, M3_2, M4_1,M4_2) through metaphlan2. It is a Shell Script (hince the .sh extenion)
+echo "Starting Shell Script..."
+echo "Cleaning-up any Old Data..."
+rm ~/Rivera_2016/biobakery/metaphlan2/profiled_samples/QC_profiled_samples/*.txt
+echo "Data Cleaned"
+echo "Starting to run Control Samples: C1, C2, C3, C4"
+echo "Running Metaphlan2 on Sample_C1: R1 and R2"
+echo "Running C1..."
+python metaphlan2.py ./QC_Mouse_Data/Control_Data/C1_GTGAAA_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Control_Data/C1_GTGAAA_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/C1_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_C1_metagenome.txt
+echo "C1 Complete!"
+echo "#############(1/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_C2: R1 and R2"
+echo "Running C2..."
+python metaphlan2.py ./QC_Mouse_Data/Control_Data/C2_CTTGTA_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Control_Data/C2_CTTGTA_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/C2_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_C2_metagenome.txt
+echo "C2 Complete!"
+echo "#############(2/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_C3: R1 and R2"
+echo "Running C3..."
+python metaphlan2.py ./QC_Mouse_Data/Control_Data/C3_CAGATC_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Control_Data/C3_CAGATC_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/C3_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_C3_metagenome.txt
+echo "C3 Complete!"
+echo "#############(3/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_C4: R1 and R2"
+echo "Running C4..."
+python metaphlan2.py ./QC_Mouse_Data/Control_Data/C4_AGTCAA_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Control_Data/C4_AGTCAA_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/C4_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_C4_metagenome.txt
+echo "C4 Complete... Done Running Control Samples!"
+echo "#############(4/8 Samples Run)##############"
+echo "Starting to run Exp Samples: M1, M2, M3, M4"
+echo "Running Metaphlan2 on Sample_M1: R1 and R2"
+echo "Running M1..."
+python metaphlan2.py ./QC_Mouse_Data/Exp_Data/M1_ACAGTG_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Exp_Data/M1_ACAGTG_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/M1_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_M1_metagenome.txt
+echo "M1 Complete!"
+echo "#############(5/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_M2: R1 and R2"
+echo "Running M2..."
+python metaphlan2.py ./QC_Mouse_Data/Exp_Data/M2_GCCAAT_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Exp_Data/M2_GCCAAT_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/M2_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_M2_metagenome.txt
+echo "M2 Complete!"
+echo "#############(6/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_M3: R1 and R2"
+echo "Running M3..."
+python metaphlan2.py ./QC_Mouse_Data/Exp_Data/M3_CGATGT_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Exp_Data/M3_CGATGT_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/M3_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_M3_metagenome.txt
+echo "M3 Complete!"
+echo "#############(7/8 Samples Run)##############"
+echo "Running Metaphlan2 on Sample_M4: R1 and R2"
+echo "Running M4..."
+python metaphlan2.py ./QC_Mouse_Data/Exp_Data/M4_TGACCA_L002_R1_001_kneaddata_paired_1.fastq,./QC_Mouse_Data/Exp_Data/M4_TGACCA_L002_R1_001_kneaddata_paired_2.fastq --bowtie2out ./profiled_samples/QC_profiled_samples/M4_metagenome_bowtie2_out.txt --nproc 40 --input_type fastq --mpa_pkl ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db ~/Rivera_2016/biobakery/metaphlan2/db_v20/mpa_v20_m200 > ./profiled_samples/QC_profiled_samples/profiled_M4_metagenome.txt
+echo "M4 Complete! Done Running All Samples!"
+echo "#############(8/8 Samples Run)##############"
+echo "All Eight Samples were run through Metaphlan2"
+echo "      (End of Shell Script: Terminate)"
